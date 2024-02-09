@@ -1,8 +1,10 @@
-![reactjs-vite-tailwindcss-boilerplate](https://user-images.githubusercontent.com/16243531/217138979-b854309c-4742-4275-a705-f9fec5158217.jpg)
+# ToDo App
 
-# React Tailwindcss Boilerplate build with Vite
+This is a test task for trainee react position.
 
-This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
+## Requirements:
+
+Write a Todo List with the ability to add tasks, delete them and mark them as completed. You need to do this by simply waking up Props down without state managers and API context.
 
 ## What is inside?
 
@@ -78,3 +80,17 @@ pnpm run test:ui
 ## License
 
 This project is licensed under the MIT License.
+
+## Screenshots of the completed task:
+
+ToDo app homepage
+
+![ToDo app homepage](/src/assets/homepage.jpg)
+
+This application has an input and an "Add task" button
+
+Tasks
+
+![Tasks](/src/assets/tasks.jpg)
+
+After entering a new task, we see buttons 'Unfulfilled' and 'Delete'. If you click the 'Unfulfilled' button, it automatically changes to 'Completed'
