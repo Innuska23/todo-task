@@ -5,7 +5,8 @@ import { id } from 'utils'
 interface IToDoFormProps {
   onAdd: (todo: Todo) => void
 }
-const ToDoForm = ({ onAdd }: IToDoFormProps) => {
+
+const ToDoForm: React.FC<IToDoFormProps> = ({ onAdd }) => {
   const [todo, setTodo] = useState('')
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -20,7 +21,11 @@ const ToDoForm = ({ onAdd }: IToDoFormProps) => {
   }
 
   return (
-    <form className="mb-4 flex justify-center gap-2" onSubmit={handleSubmit}>
+    <form
+      className="mb-4 flex justify-center gap-2"
+      onSubmit={handleSubmit}
+      data-testid="form"
+    >
       <input
         id="task"
         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-indigo-500"
@@ -33,8 +38,8 @@ const ToDoForm = ({ onAdd }: IToDoFormProps) => {
         onChange={onChangeForm}
       />
       <button
-        className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
         type="submit"
+        className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
       >
         Add task
       </button>
